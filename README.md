@@ -1,6 +1,6 @@
 ![](demo/preview.gif)
 
-# Swallowing feature for BSPWM
+# DWM like Swallowing feature for BSPWM
 
 # Usage
 ```sh
