@@ -28,7 +28,8 @@ case $(file --mime-type "$1" -bL) in
    image/*)
       pidof feh ||
          swallow \
-            "feh -F -d --edit --keep-zoom-vp --start-at" "$1"
+            "feh -d --edit --keep-zoom-vp --start-at" "$1"
+            # "feh -F -d --edit --keep-zoom-vp --start-at" "$1"
             # -A "setBg %f" -B "black"
       ;;
 
