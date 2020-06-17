@@ -4,4 +4,3 @@ bspc node -g hidden
 sh -c "$1 $2" >/dev/null 2>&1
 bspc node any.hidden -g hidden
 bspc node -f next.local
-
