@@ -4,7 +4,7 @@
 
 # Usage
 ```sh
-launch-swallow [CMD] [FILE]
+swallow [CMD] [FILE]
 ```
 
 # Documentation
