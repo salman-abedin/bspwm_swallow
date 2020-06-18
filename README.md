@@ -1,6 +1,7 @@
 ![](demo/preview.gif)
 
-# DWM like Swallowing feature for BSPWM
+# ~~DWM like Swallowing feature for BSPWM~~
+# This was deprecated in favor of [Devour](https://github.com/salman-abedin/devour)
 
 # Usage
 ```sh
