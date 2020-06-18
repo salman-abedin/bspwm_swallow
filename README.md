@@ -4,7 +4,7 @@
 
 # Usage
 ```sh
-swallow [CMD] [FILE]
+swallow [CMD...]
 ```
 
 # Documentation

@@ -1,35 +1,34 @@
 #!/usr/bin/env sh
 
 echo "$1" | grep "\.ar\." && {
-   swallow alacritty \
-      --config-file ~/.config/alacritty/alacritty_ar.yml \
-      -e "$EDITOR" "$1" &
-   exit
+  swallow alacritty \
+    --config-file ~/.config/alacritty/alacritty_ar.yml \
+    -e "$EDITOR" "$1" &
+  exit
 }
 
 case $(file --mime-type "$1" -bL) in
 
-   text/* | inode/x-empty | application/json | application/octet-stream)
-      "$EDITOR" "$1"
-      ;;
+  text/* | inode/x-empty | application/json | application/octet-stream)
+    "$EDITOR" "$1"
+    ;;
 
-   video/*)
-      pidof mpv || swallow mpv "$1"
-      ;;
+  video/*)
+    pidof mpv || swallow mpv "$1"
+    ;;
 
-   application/pdf | application/postscript)
-      pidof zathura || swallow zathura "$1"
-      ;;
+  application/pdf | application/postscript)
+    pidof zathura || swallow zathura "$1"
+    ;;
 
-   image/gif)
-      pgrep mpv || swallow "mpv --loop" "$1"
-      ;;
+  image/gif)
+    pgrep mpv || swallow "mpv --loop" "$1"
+    ;;
 
-   image/*)
-      pidof feh ||
-         swallow \
-            "feh -A 'set-bg %f' -B 'black' -F -d --edit --keep-zoom-vp --start-at" "$1"
-            # -A "setBg %f" -B "black"
-      ;;
+  image/*)
+    pidof feh ||
+      swallow \
+        "feh -A 'set-bg %f' -B 'black' -F -d --edit --keep-zoom-vp --start-at" "$1"
+    ;;
 
 esac
