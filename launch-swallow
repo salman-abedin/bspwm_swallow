@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
 echo "$1" | grep "\.ar\." && {
-  swallow alacritty \
+  devour alacritty \
     --config-file ~/.config/alacritty/alacritty_ar.yml \
     -e "$EDITOR" "$1" &
   exit
@@ -14,20 +14,20 @@ case $(file --mime-type "$1" -bL) in
     ;;
 
   video/*)
-    pidof mpv || swallow mpv "$1"
+    pidof mpv || devour mpv "$1"
     ;;
 
   application/pdf | application/postscript)
-    pidof zathura || swallow zathura "$1"
+    pidof zathura || devour zathura "$1"
     ;;
 
   image/gif)
-    pgrep mpv || swallow "mpv --loop" "$1"
+    pgrep mpv || devour "mpv --loop" "$1"
     ;;
 
   image/*)
     pidof feh ||
-      swallow \
+      devour \
         "feh -A 'set-bg %f' -B 'black' -F -d --edit --keep-zoom-vp --start-at" "$1"
     ;;
 
