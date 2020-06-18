@@ -6,6 +6,7 @@
 # Usage
 ```sh
 swallow [CMD...]
+launch-swallow [FILE...]
 ```
 
 # Documentation
