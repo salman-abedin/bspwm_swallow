@@ -2,7 +2,7 @@
 
 # ~~DWM like Swallowing feature for BSPWM~~
 
-# This was deprecated in favor of [Devour](https://github.com/salman-abedin/devour)
+# Screw this! Use [Devour](https://github.com/salman-abedin/devour)
 
 # Usage
 
