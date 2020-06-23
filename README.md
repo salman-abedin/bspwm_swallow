@@ -1,17 +1,21 @@
 ![](demo/preview.gif)
 
-# ~~DWM like Swallowing feature for BSPWM~~
+# DWM like Swallowing feature for BSPWM
 
-# Screw this! Use [Devour](https://github.com/salman-abedin/devour)
+# Installation
+
+```sh
+git clone https://github.com/salman-abedin/bspwm_swallow.git && cd bspwm_swallow && sudo make install
+```
 
 # Usage
 
 ```sh
 swallow [CMD...]
-launch-swallow [FILE...]
 ```
 
-# Documentation
+## Uninstallation
 
-Coming soon. lol.
-
+```sh
+sudo make uninstall
+```
