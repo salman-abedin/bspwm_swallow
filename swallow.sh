@@ -8,4 +8,4 @@ id=$(xdo id)
 xdo hide
 wait
 xdo show "$id"
-bspc node -s last.local
+bspc node -s prev.local
